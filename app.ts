@@ -79,6 +79,7 @@ io.on('connection', (socket: any) => {
     console.log('a user connected...');
     socket.emit('msg', []);
     setInterval(() => {
+        // 编写服务端业务逻辑
         socket.emit('msg', message);
     }, 5000)
     socket.on('newMsg', (data: any, callback: any) => {
